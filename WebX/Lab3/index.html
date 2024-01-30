@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Hello World</title>
+</head>
+<body>
+    <div ng-app="app1" ng-controller="controller">
+        <p>Enter Your Name:<input ng-model="name"></p>
+        <p>Hello {{name}}</p>
+        <p>Enter Your Age:<input ng-model="age"></p>
+        <p>Your Age is {{age}}</p>
+        <p>Enter Your College Name:<input ng-model="clg"></p>
+        <p>Your College Name is {{clg}}</p>
+        <p>Enter Your Skills: <input ng-model="skills" placeholder="Enter skills separated by commas"></p>
+        <p>Skills: {{skills.split(',')}}</p>
+    </div>
+</body>
+<script>
+    var app = angular.module('app1', []);
+    app.controller('controller', function($scope) {
+        $scope.name = "Raghav";
+        $scope.age = 20;
+        $scope.clg = "VESIT";
+        $scope.skills=['Flutter','Firebase'];
+    });
+</script>
+</html>
