@@ -1,24 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <section class="intro" id="home">
+        <!-- Other content -->
+        <div class="custom-marquee">
+            <p>Welcome to my portfolio ! Scroll through to explore.</p>
+        </div>
+    </section>
+    <title>Your Profile</title>
+    <link rel="stylesheet" href="style.css"> <!-- Include your external CSS file here -->
+    <!-- <script defer data-domain="raghav-mundhara.github.io/iplab2" src="https://plausible.io/js/script.js"></script> -->
+
 </head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZMQZM51W1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-7ZMQZM51W1');
+</script>
 <body>
-    <div id="app">
-        <input id="num1" type="number" placeholder="Enter Num 1">
-        <input id="num2" type="number" placeholder="Enter Num 2">
-        <button id='add'>Add</button>
-        <button id="divide">Divide</button>
-        <button id="subtract">Subtract</button>
-        <button id="multiply">Multiply</button>
-        <p>Result: </p>
-        <p id="result"></p>
-        <script src="operators.js"></script>
-    </div>
-</body>
+    <header>
+        <h1>Raghav Mundhara</h1>
+        <p class="custom-paragraph">Third Year student at VESIT || App Developer</p>
+    </header>
 
+
+   
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="https://avatars.githubusercontent.com/u/102050705?v=4" alt="Your Profile Photo">
+        <p class="intro-text">
+            <strong>A driven and innovative third-year engineering student with a strong passion for app
+                development. Possesses good problem-solving
+                skills, attention to detail, and ability to work collaboratively with cross-functional teams. Excited to
+                leverage my skills and knowledge to
+                contribute to a dynamic and innovative engineering environment.
+        </p>
+    </section>
+   
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Flutter</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+            <li>Firebase</li>
+            <li>MongoDB</li>
+            <li>NodeJs</li>
+            <li>ExpressJs</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <table>
+            <tr>
+                <th>Email</th>
+                <td><a href="mailto:mundhararaghav16@gmail.com">mundhararaghav16@gmail.com</a></td>
+            </tr>
+            <tr>
+                <th>LinkedIn</th>
+                <td><a href="https://in.linkedin.com/in/raghav-mundhara" target="_blank">Raghav's LinkedIn Profile</a></td>
+            </tr>
+
+
+            <tr>
+                <th>Github</th>
+                <td><a href="https://github.com/Raghav-2104" target="_blank">Github</a></td>
+            </tr>
+        </table>
+    </section>
+</body>
 </html>
