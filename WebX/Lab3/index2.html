@@ -1,0 +1,94 @@
+<!-- Events and validation in AngularJs (Create functions and add events , add html validators , use $valid of Angular) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>Expt3.2</title>
+</head>
+<body>
+    <div ng-app="app1" ng-controller="ctrl1">
+        <form name="form1">
+            <p>Email: <input type="email" name="email" ng-model="email" ></p>
+            <p>Name: <input type="text" name="name" ng-model="name" ></p>
+
+            <p>Select Your Age Group</p>
+            <input type="radio" ng-model="AgeGroup" value="0-10">0-10
+            <br>
+            <input type="radio" ng-model="AgeGroup" value="10-20">10-20
+            <br>
+            <input type="radio" ng-model="AgeGroup" value="20+">20+
+            <br>
+            <br>
+            Select Gender:
+            <select ng-model="Gender">
+                <option value="">
+                <option value="male">Male
+                <option value="female">Female
+            </select>
+            <br>
+            <button ng-model="details" ng-click="showDetails()">Submit</button>
+            <br>
+            <br>
+
+            Skills:
+            <br>
+            Flutter<input type="checkbox" ng-model="flutter">
+            Firebase<input type="checkbox" ng-model="firebase">
+            ReactJS<input type="checkbox" ng-model="reactjs">
+        </form>
+        <div ng-show="show">
+            <div ng-switch="AgeGroup">
+                Age Group:
+                <div ng-switch-when="0-10">
+                    <p>0-10</p>
+                </div>
+                <div ng-switch-when="10-20">
+                    <p>10-20</p>
+                </div>
+                <div ng-switch-when="20+">
+                    <p>20+</p>
+                </div>
+            </div>
+            <div ng-switch="Gender">
+                Gender:
+                <div ng-switch-when="male">
+                    <p>Male</p>
+                </div>
+                <div ng-switch-when="female">
+                    <p>Female</p>
+                </div>
+            </div>
+            <div ng-show="flutter">
+                Flutter
+            </div>
+            <div ng-show="firebase">
+                Firebase
+            </div>
+            <div ng-show="reactjs">
+                ReactJs
+            </div>
+        </div>
+        <p ng-mouseover="hoverfun()">Show Details</p>
+    </div>
+</body>
+<script>
+    var app=angular.module('app1',[]);
+    app.controller('ctrl1',($scope)=>{
+        $scope.email="temp@gmail.com"
+        $scope.name="Temp"
+        $scope.showDetails=()=>{
+            if($scope.form1.$valid){
+                alert("VALID FORM")
+            }else{
+                alert("Invalid Form")
+            }
+        }
+        $scope.hoverfun=()=>{
+            $scope.show=!$scope.show
+        }
+    })
+</script>
+
+</html>
