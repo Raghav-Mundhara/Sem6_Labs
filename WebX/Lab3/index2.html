@@ -14,12 +14,11 @@
             <p>Name: <input type="text" name="name" ng-model="name" ></p>
             <p>Salary: <input type="number" ng-model="salary"></p>
             <p>Select Your Age Group</p>
-            <input type="radio" ng-model="AgeGroup" value="0-10">0-10
+            <input type="radio" ng-model="AgeGroup" value="20-40">20-40
             <br>
-            <input type="radio" ng-model="AgeGroup" value="10-20">10-20
+            <input type="radio" ng-model="AgeGroup" value="40+">40+
             <br>
-            <input type="radio" ng-model="AgeGroup" value="20+">20+
-            <br>
+            Enter your current project name<input type="text" ng-model="project">
             <br>
             Select Gender:
             <select ng-model="Gender">
@@ -41,14 +40,11 @@
         <div ng-show="show">
             <div ng-switch="AgeGroup">
                 Age Group:
-                <div ng-switch-when="0-10">
-                    <p>0-10</p>
-                </div>
                 <div ng-switch-when="10-20">
-                    <p>10-20</p>
+                    <p>20-40</p>
                 </div>
                 <div ng-switch-when="20+">
-                    <p>20+</p>
+                    <p>40+</p>
                 </div>
             </div>
             <div ng-switch="Gender">
@@ -71,6 +67,9 @@
             </div>
             <div>
                 <p>Salary is {{salary | currency}}</p>
+            </div>
+            <div>
+                <p>Current Project is : {{project}}</p>
             </div>
         </div>
         <p ng-mouseover="hoverfun()">Show Details</p>
