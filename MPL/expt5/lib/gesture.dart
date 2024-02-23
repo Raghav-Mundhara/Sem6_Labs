@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class GesturePage extends StatefulWidget {
   const GesturePage({super.key});
-
   @override
   State<GesturePage> createState() => _GesturePageState();
 }
@@ -41,12 +40,15 @@ class _GesturePageState extends State<GesturePage> {
                   ),
                 );
               },
-              child: Container(
-                height: 150.0,
-                width: 150.0,
-                color: Colors.teal,
-                child: const Center(
-                  child: Text('Tap Me'),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 150.0,
+                  width: 150.0,
+                  color: Colors.teal,
+                  child: const Center(
+                    child: Text('Tap Me'),
+                  ),
                 ),
               ),
             ),

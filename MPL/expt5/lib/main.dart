@@ -50,15 +50,24 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Go to Gesture Screen'),
             ),
-            ElevatedButton(
-              onPressed: () {
+            InkWell(
+              onHover: (value) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('Unknown route. Please try again.'),
+                    content: Text('Hovering over the button'),
                   ),
                 );
               },
-              child: const Text('Open route'),
+              child: ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Unknown route. Please try again.'),
+                    ),
+                  );
+                },
+                child: const Text('Open route'),
+              ),
             ),
           ],
         ),
