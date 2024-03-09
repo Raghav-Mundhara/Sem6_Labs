@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "894916493246",
+    "project_id": "expt6-865f9",
+    "storage_bucket": "expt6-865f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894916493246:android:7b9838e5dae3b52e9a43ef",
+        "android_client_info": {
+          "package_name": "com.example.expt6"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgaoiQkCap4ScBpZ2zHAjpoRybQtFW2iI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
