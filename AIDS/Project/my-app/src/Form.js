@@ -7,13 +7,18 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Extract values from form inputs and convert to integers
     const ageValue = parseInt(document.getElementById("inputEmail4").value);
     const chestPainValue = parseInt(document.getElementById("inputState").value);
     const exerciseAnginaValue = parseInt(document.getElementById("exerciseAnginaSelect").value);
     const stSlopeValue = parseInt(document.getElementById("stSlopeSelect").value);
     const oldPeakValue = parseInt(document.getElementById("inputOldPeak").value);
-
+    console.log(
+      ageValue,
+      chestPainValue,
+      exerciseAnginaValue,
+      stSlopeValue,
+      oldPeakValue
+    );
     // Send POST request with the converted values
     fetch('http://127.0.0.1:5000/predict', {
       method: 'POST',
@@ -30,7 +35,7 @@ function Form() {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       setResult(data.result);
     })
     .catch((error) => {
